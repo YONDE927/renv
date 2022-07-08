@@ -1,0 +1,13 @@
+version: "2"
+
+services:
+  rstudio:
+    image: yonde927/renv:1.0.0
+    container_name: rcontainer
+    ports: 
+      - 8787:8787
+    working_dir: /home/rstudio
+    volumes:
+      - .:/home/rstudio
+    environment:
+    stdin_open: true
